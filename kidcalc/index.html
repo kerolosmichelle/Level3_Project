@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Kidcalc</title>
+    <!-- Links to external CSS files for styling and themes -->
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<!-- Body with the default theme applied -->
+<body class="theme1">
+    <div>
+        <!-- Form for user information -->
+        <form action="">
+            <h2>The Information</h2>
+            <!-- Input for user's name -->
+            <label for="">Ur Name:</label>
+            <input type="text" id="username" placeholder="Enter Ur name:">
+            <!-- Input for user's age -->
+            <label for="">Ur Age:</label>
+            <input type="text" placeholder="Enter Ur age:">
+        </form>
+        <br>
+        <!-- Button to submit user information -->
+        <button onclick="storeAndDisplay()" id="subimt_mane">Submit</button>
+
+        <!-- Calculator section -->
+        <h2>Simple Calculator</h2>
+        <div class="calculator">
+            <!-- Display for the calculator -->
+            <input type="text" id="display" disabled>
+            <br>
+            <!-- Calculator buttons -->
+            <button onclick="clearDisplay()">C</button> <!-- Clear button -->
+            <button onclick="appendToDisplay('<')"><</button> <!-- Less than button -->
+            <button onclick="appendToDisplay('>')"> > </button> <!-- Greater than button -->
+            <button onclick="percentage()">%</button> <!-- Percentage button -->
+            <br>
+            <!-- Number and operator buttons -->
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <br>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <br>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <br>
+            <!-- Zero button (wider than others) -->
+            <button id="zero_btn" onclick="appendToDisplay('0')">0</button>
+            <!-- Decimal point button -->
+            <button onclick="appendToDisplay('.')">.</button>
+            <!-- Equals button to calculate result -->
+            <button onclick="calculateResult()">=</button>
+            <br>
+            <br>
+            <!-- Form for user's answer -->
+            <form action="">
+                <label for="">Ur Answer</label>
+                <input type="text" placeholder="Ur Answer" id="answer">
+                <!-- Clear and submit buttons -->
+                <button>Clear</button>
+                <button onclick="">Submit</button>
+                <!-- Result display -->
+                <h2>result</h2>
+                <p id="welcome"> </p>
+            </form>
+        </div>
+        <br><br>
+        <!-- Button to change the background theme -->
+        <button id="changetheme" onclick="changeRandomBackground()">Change Background</button>
+    </div>
+    <!-- Link to external JavaScript file -->
+    <script src="./JS/main.js"></script>
+</body>
+</html>

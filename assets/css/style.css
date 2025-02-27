@@ -1,0 +1,179 @@
+/* Home section with a semi-transparent background */
+.home1 {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+}
+
+/* Universal reset for margin, padding, and box-sizing */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Sets default font */
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex; /* Uses flexbox for alignment */
+    justify-content: space-between; /* Spaces items evenly */
+    align-items: center; /* Centers items vertically */
+    background: #222; /* Dark background */
+    padding: 15px 30px; /* Adds padding inside the nav */
+    color: white; /* White text color */
+}
+
+/* Navigation list styling */
+nav ul {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Uses flexbox for alignment */
+}
+
+/* Navigation list items styling */
+nav ul li {
+    margin-left: 20px; /* Adds spacing between list items */
+}
+
+/* Navigation links styling */
+nav ul li a {
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline */
+}
+
+/* Header section styling */
+header {
+    position: relative; /* Allows absolute positioning of child elements */
+    background: url('image.png') no-repeat center center/cover; /* Background image */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Uses flexbox for alignment */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Centers text */
+    color: white; /* White text color */
+}
+
+/* Menu toggle button (hidden by default) */
+.menu-toggle {
+    display: none; /* Hides the menu toggle button */
+}
+
+/* Responsive styles for screens up to 768px */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hides the navigation list */
+        flex-direction: column; /* Stacks list items vertically */
+        width: 100%; /* Full width */
+        background-color: #3b4e54; /* Background color */
+        position: absolute; /* Positions the list absolutely */
+        top: 50px; /* Positions below the nav */
+        left: 0; /* Aligns to the left */
+    }
+
+    /* Active state for the navigation list */
+    .navbar ul.active {
+        display: flex; /* Shows the navigation list */
+    }
+
+    /* Shows the menu toggle button */
+    .menu-toggle {
+        display: block; /* Displays the menu toggle button */
+    }
+}
+
+/* Animation for header text */
+header h2::after {
+    content: ""; /* Empty content */
+    animation-duration: 6s; /* Animation duration */
+    animation-name: repeatparagraph; /* Animation name */
+    animation-iteration-count: infinite; /* Repeats infinitely */
+}
+
+/* Responsive styles for screens up to 1024px */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts grid layout */
+    }
+
+    /* Hides the menu toggle button */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Responsive styles for screens up to 768px */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hides the navigation list */
+        flex-direction: column; /* Stacks list items vertically */
+        width: 100%; /* Full width */
+        background-color: #3b4e54; /* Background color */
+        position: absolute; /* Positions the list absolutely */
+        top: 50px; /* Positions below the nav */
+        left: 0; /* Aligns to the left */
+    }
+
+    /* Active state for the navigation list */
+    .navbar ul.active {
+        display: flex; /* Shows the navigation list */
+    }
+
+    /* Shows the menu toggle button */
+    .menu-toggle {
+        display: block; /* Displays the menu toggle button */
+    }
+}
+
+/* Responsive styles for screens up to 480px */
+@media (max-width: 480px) {
+    .about-section {
+        flex-direction: column; /* Stacks items vertically */
+        padding: 20px; /* Adds padding */
+    }
+
+    /* Hides the about image */
+    .about-image {
+        display: none; /* Removes the image */
+    }
+
+    /* Adjusts form container layout */
+    .form-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    /* Stacks buttons vertically */
+    .button-container {
+        flex-direction: column; /* Stacks buttons vertically */
+        align-items: center; /* Centers buttons horizontally */
+    }
+
+    /* Ensures inputs are displayed inline */
+    input {
+        display: inline; /* Displays inputs inline */
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Centers text */
+    background-color: #825da9; /* Purple background */
+    color: white; /* White text color */
+    margin-top: 20px; /* Adds spacing above */
+    background-size: cover; /* Ensures background covers the area */
+}
+
+/* Footer home section with a semi-transparent overlay */
+footer .footer-home {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+}
+
+/* Footer list styling */
+footer ul {
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Uses flexbox for alignment */
+}

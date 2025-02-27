@@ -1,0 +1,452 @@
+/* Importing an external stylesheet */
+@import url("style.css");
+
+/* Header section with a background image */
+header {
+    position: relative; /* Allows child elements to be positioned absolutely */
+    background: url('https://th.bing.com/th/id/OIP.z3uN3aQzZwxri7IqjsOEVQHaFM?w=258&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7') no-repeat center center/cover;
+    height: 100vh; /* Full viewport height */
+    background-size: cover; /* Ensures the background image covers the entire area */
+    display: flex; /* Enables flexbox for alignment */
+    color: white; /* Sets text color to white */
+}
+.social-media{
+    margin: 10px 0px 10px 0px;
+}
+/* Main container with a grid layout */
+.container {
+    display: grid; /* Uses CSS Grid for layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center; /* Vertically centers content */
+    padding: 50px; /* Adds padding inside the container */
+    height: 100vh; /* Full viewport height */
+    position: relative; /* Allows absolute positioning of child elements */
+}
+
+/* Overlay to darken the background for better text visibility */
+.overlay {
+    display: flex;
+    position: absolute; /* Covers the entire container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensures it stays above the background but below content */
+}
+
+/* Content styling */
+.content {
+    z-index: 2; /* Places content above the overlay */
+    padding: 20px; /* Adds spacing inside the content */
+}
+
+/* Title text styling */
+.title {
+    font-size: 40px; /* Large font size */
+    font-family: 'Brush Script MT', cursive; /* Cursive font */
+    color: white; /* White text for contrast */
+}
+
+/* Description text styling */
+.description {
+    font-size: 16px; /* Medium font size */
+    line-height: 1.6; /* Improves readability with line spacing */
+}
+
+/* Read More Button styling */
+.read-more {
+    background: transparent; /* Transparent background */
+    color: red; /* Red text color */
+    border: 2px solid red; /* Red border */
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 16px; /* Medium font size */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: 0.3s; /* Smooth hover transition */
+}
+
+/* Hover effect for Read More Button */
+.read-more:hover {
+    background: red; /* Changes background to red on hover */
+    color: white; /* Changes text color to white on hover */
+}
+
+/* Image container styling */
+.image-container {
+    z-index: 2; /* Ensures image appears above the overlay */
+    display: flex; /* Uses flexbox for centering */
+    justify-content: center; /* Centers image horizontally */
+    align-items: center; /* Centers image vertically */
+}
+
+/* Image styling inside the container */
+.image-container img {
+    width: auto; /* Maintains natural width */
+    height: auto; /* Maintains natural height */
+    border-radius: 10%; /* Rounds the corners of the image */
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+/* Author details section */
+.auther-details {
+    text-align: justify; /* Justifies text alignment */
+    width: 50%; /* Limits width for better readability */
+    margin-top: 15px; /* Adds spacing above */
+}
+
+/* Alternate Read More Button styling */
+.read_more {
+    background: transparent; /* Transparent background */
+    color: blue; /* Blue text color */
+    font-size: 18px; /* Larger font size */
+    border: 2px solid blue; /* Blue border */
+    padding: 10px 20px; /* Adds padding inside the button */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-family: Arial, sans-serif; /* Sans-serif font */
+    margin-top: 10px; /* Adds spacing above */
+}
+
+/* Hover effect for alternate Read More Button */
+.read_more:hover {
+    background: #f0f0f0; /* Light gray background on hover */
+}
+
+/* Author container with image and info */
+.author-container {
+    display: flex; /* Uses flexbox for alignment */
+    align-items: center; /* Centers items vertically */
+    margin-top: 10px; /* Adds spacing above */
+}
+
+/* Author image styling */
+.author-image {
+    width: 60px; /* Sets image size */
+    height: 60px; /* Ensures square shape */
+    border-radius: 50%; /* Makes the image circular */
+    display: flex; /* Uses flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    font-size: 12px; /* Small font size */
+    color: white; /* White text color */
+    margin-right: 15px; /* Adds spacing to the right */
+}
+
+/* Author info text styling */
+.author-info {
+    color: #eaa3a3; /* Light red text color */
+}
+
+/* Author name styling */
+.author-name {
+    color: #a4d8fa; /* Light blue text color */
+    font-size: 18px; /* Medium font size */
+    margin: 0; /* Removes default margin */
+}
+
+/* Author description styling */
+.author-description {
+    font-size: 14px; /* Small font size */
+    margin: 5px 0 0; /* Adds spacing above */
+}
+
+/* Overlay padding adjustment */
+.overlay {
+    padding-top: 50px; /* Adds padding at the top */
+}
+
+/* Social media icons container */
+.social-icons {
+    margin-top: 10px; /* Adds spacing above */
+}
+
+/* Social media icons styling */
+.social-icons a img {
+    width: 30px; /* Sets icon size */
+    margin: 0 5px; /* Adds spacing between icons */
+}
+
+/* Home section with background image */
+.home {
+    background-image: url("../IMg/WhatsApp\ Image\ 2025-01-02\ at\ 01.40.45_d8fee360.jpg");
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    background-size: cover; /* Ensures the background image covers the area */
+}
+
+/* Animation for header text */
+header h2::after {
+    content: ""; /* Empty content */
+    animation-duration: 6s; /* Animation duration */
+    animation-name: repeatparagraph; /* Animation name */
+    animation-iteration-count: infinite; /* Repeats infinitely */
+}
+
+/* Keyframes for typing animation */
+@keyframes repeatparagraph {
+    0% { content: "|"; }
+    10% { content: "o |"; }
+    20% { content: "ol |"; }
+    30% { content: "olo |"; }
+    40% { content: "olos|"; }
+    50% { content: "olos |"; }
+    60% { content: "olos M|"; }
+    70% { content: "olos Mi|"; }
+    80% { content: "olos Mich|"; }
+    90% { content: "olos Miche|"; }
+    100% { content: "olos Michelle |"; }
+}
+
+/* About section layout */
+.about-section {
+    display: flex; /* Uses flexbox for alignment */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    gap: 30px; /* Adds spacing between items */
+    padding: 50px; /* Adds padding inside the section */
+    max-width: 1200px; /* Limits maximum width */
+    margin: auto; /* Centers the section */
+}
+
+/* About image styling */
+.about-image img {
+    width: 100%; /* Full width */
+    max-width: 500px; /* Limits maximum width */
+    border-radius: 10px; /* Rounds the corners */
+}
+
+/* About content styling */
+.about-content {
+    flex: 1; /* Takes remaining space */
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 100%; /* Full width */
+    background: #e0e0e0; /* Light gray background */
+    border-radius: 10px; /* Rounds the corners */
+    overflow: hidden; /* Hides overflow */
+    margin: 10px 0; /* Adds spacing */
+}
+
+/* Progress bar segments */
+.progress-bar div {
+    height: 20px; /* Sets height */
+    text-align: center; /* Centers text */
+    color: white; /* White text color */
+    font-size: 14px; /* Small font size */
+}
+
+/* Progress bar colors */
+.green { background: green; width: 25%; }
+.blue { background: blue; width: 50%; }
+.yellow { background: orange; width: 75%; }
+.red { background: red; width: 100%; }
+
+/* Cards section */
+.cards {
+    text-align: center; /* Centers text */
+    padding: 50px 20px; /* Adds padding */
+}
+
+/* Button container for alignment */
+.button-container {
+    display: flex; /* Uses flexbox for alignment */
+    gap: 15px; /* Adds spacing between buttons */
+    margin-top: 20px; /* Adds spacing above */
+}
+
+/* General button styling */
+.button {
+    padding: 10px 20px; /* Adds padding */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds the corners */
+    font-size: 16px; /* Medium font size */
+    cursor: pointer; /* Changes cursor to pointer */
+    transition: 0.3s; /* Smooth hover transition */
+}
+
+/* Download button styling */
+.download {
+    padding: 10px 50px; /* Adds padding */
+    background: transparent; /* Transparent background */
+    color: blue; /* Blue text color */
+    border: 2px solid blue; /* Blue border */
+}
+
+/* Hover effect for Download button */
+.download:hover {
+    background: blue; /* Changes background to blue */
+    color: white; /* Changes text color to white */
+}
+
+/* Submit button styling */
+.submit {
+    padding: 10px 50px; /* Adds padding */
+    background: transparent; /* Transparent background */
+    color: red; /* Red text color */
+    border: 2px solid red; /* Red border */
+}
+
+/* Hover effect for Submit button */
+.submit:hover {
+    color: white; /* Changes text color to white */
+    background: red; /* Changes background to red */
+    border-color: red; /* Changes border color to red */
+}
+
+/* Card container layout */
+.card-container {
+    display: grid; /* Uses CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Adds spacing between cards */
+    max-width: 1200px; /* Limits maximum width */
+    margin: auto; /* Centers the container */
+}
+
+/* Individual card styling */
+.card {
+    background: white; /* White background */
+    border-radius: 10px; /* Rounds the corners */
+    overflow: hidden; /* Hides overflow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds shadow */
+    text-align: center; /* Centers text */
+    padding-bottom: 20px; /* Adds padding at the bottom */
+}
+
+/* Card image styling */
+.card img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+/* Card heading styling */
+.card h3 {
+    margin: 15px 0; /* Adds spacing */
+}
+
+/* Card paragraph styling */
+.card p {
+    padding: 0 15px; /* Adds padding */
+    color: #555; /* Gray text color */
+}
+
+/* Card link styling */
+.card a {
+    display: inline-block; /* Makes the link a block element */
+    margin-top: 10px; /* Adds spacing above */
+    padding: 10px 20px; /* Adds padding */
+    border: 1px solid blue; /* Blue border */
+    color: blue; /* Blue text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px; /* Rounds the corners */
+}
+
+/* Form section styling */
+.form-section {
+    text-align: center; /* Centers text */
+    padding: 50px 20px; /* Adds padding */
+}
+
+/* Form container layout */
+.form-container {
+    display: grid; /* Uses CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Adds spacing between inputs */
+    max-width: 800px; /* Limits maximum width */
+    margin: auto; /* Centers the container */
+}
+
+/* Form input styling */
+.form-container input {
+    width: 100%; /* Full width */
+    padding: 10px; /* Adds padding */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounds the corners */
+}
+
+/* Form button styling */
+.form-container button {
+    grid-column: span 2; /* Spans two columns */
+    padding: 10px; /* Adds padding */
+    background: blue; /* Blue background */
+    color: white; /* White text color */
+    border: none; /* Removes border */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+/* Footer styling */
+footer {
+    background: #222; /* Dark background */
+    color: white; /* White text color */
+    padding: 20px; /* Adds padding */
+    text-align: center; /* Centers text */
+}
+
+/* Icon styling */
+i {
+    color: white; /* White icon color */
+    padding: 2px; /* Adds padding */
+}
+
+/* Grid container layout */
+.grid-container {
+    display: grid; /* Uses CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Adds spacing between items */
+    max-width: 1200px; /* Limits maximum width */
+    margin: auto; /* Centers the container */
+}
+
+/* Box styling */
+.box {
+    background: white; /* White background */
+    padding: 20px; /* Adds padding */
+    border-radius: 10px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow */
+    transition: transform 0.2s ease-in-out; /* Smooth hover transition */
+}
+
+/* Hover effect for box */
+.box:hover {
+    transform: translateY(-5px); /* Moves the box up slightly */
+}
+
+/* Category text styling */
+.category {
+    font-weight: bold; /* Bold text */
+    color: #007bff; /* Blue text color */
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 14px; /* Small font size */
+}
+
+/* Heading text styling */
+.heading {
+    font-size: 20px; /* Medium font size */
+    font-weight: bold; /* Bold text */
+    margin: 10px 0; /* Adds spacing */
+}
+
+/* Date text styling */
+.date {
+    color: gray; /* Gray text color */
+    font-size: 14px; /* Small font size */
+}
+
+/* Description text styling */
+.description {
+    margin: 10px 0; /* Adds spacing */
+    color: #555; /* Gray text color */
+}
+
+/* More link styling */
+.more-link {
+    color: #007bff; /* Blue text color */
+    text-decoration: none; /* Removes underline */
+    font-weight: bold; /* Bold text */
+}
+
+/* Hover effect for more link */
+.more-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}

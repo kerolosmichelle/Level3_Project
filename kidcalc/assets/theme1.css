@@ -1,0 +1,14 @@
+/* Importing an external stylesheet */
+@import url("style.css");
+
+/* Styling for the theme1 class */
+.theme1 {
+    background-size: cover; /* Ensures the background image covers the entire area */
+    width: 100%; /* Sets the width to 100% of the container */
+    height: 140vh; /* Sets the height to 140% of the viewport height */
+    padding: 0px; /* Removes padding */
+    margin: 0px; /* Removes margin */
+    background-image: url("https://th.bing.com/th/id/OIP.hWmQVTCsTnFfmSAyDm3AJAHaDs?rs=1&pid=ImgDetMainv"); /* Sets the background image */
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Sets the font family */
+    text-align: center; /* Centers the text horizontally */
+}

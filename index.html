@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="./assets/css/home.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="logo">Frontend</div>
+        <!-- Mobile menu toggle button -->
+        <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+        <ul id="nav-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Cards</a></li>
+            <li><a href="#">Slider</a></li>
+            <li><a href="#">Form</a></li>
+            <li><a href="#">Footer</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero/Header section -->
+    <header>
+        <div class="home">
+            <div class="home1">
+                <div class="overlay">
+                    <h1>Hello</h1>
+                    <h2>I am Ker</h2>
+                    <!-- Social media icons -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-2x fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-2x fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-2x fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-image">
+            <!-- About section image -->
+            <img src="./assets/images/Lavernder.jpg" alt="Lavender Field">
+        </div>
+        <div class="about-content">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <!-- Progress bars to show different percentages -->
+            <div class="progress-bar"><div class="green">25%</div></div>
+            <div class="progress-bar"><div class="blue">50%</div></div>
+            <div class="progress-bar"><div class="yellow">75%</div></div>
+            <div class="progress-bar"><div class="red">100%</div></div>
+            <div class="button-container">
+                <!-- Action buttons -->
+                <button class="download">Download</button>
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+    </section>  
+
+    <!-- Cards Section -->
+    <section class="cards">
+        <h2>Cards</h2>
+        <div class="card-container">
+            <!-- Individual card -->
+            <div class="card">
+                <img src="./assets/images/MAgdy Yacoub.jpg" alt="MAgdy Yacoub">
+                <h3>Card Title.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <a href="./blog-posts/post1.html" target="_blank">Click me</a>
+            </div>
+            <div class="card">
+                <img src="./assets/images/WhatsApp Image 2025-02-27 at 20.54.37_cd964ef6.jpg" alt="Nature">
+                <h3>Card Title.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <a href="./kidcalc/index.html" target="_blank">Click me</a>
+            </div>
+            <div class="card">
+                <img src="./assets/images/MAgdy Yacoub.jpg" alt="Website">
+                <h3>Card Title.</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <a href="./blog-posts/post1.html" target="_blank">Click me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <h2>Form</h2>
+        <div class="form-container">
+            <!-- Input fields for user information -->
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Age">
+            <input type="text" placeholder="Second Name">
+            <input type="password" placeholder="Password">
+            <!-- Form submit button -->
+            <button>Submit</button>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Frontend. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for menu toggle functionality -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

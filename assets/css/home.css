@@ -1,0 +1,273 @@
+/* Importing an external stylesheet */
+@import url("style.css");
+
+/* Header styling with a background image, full-screen height, and centered text */
+header {
+    position: relative;
+    background: url('../images/WhatsApp\ Image\ 2025-01-05\ at\ 02.51.34_5f6ff5de.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Adding padding to the overlay section */
+.overlay {
+    padding-top: 50px;
+}
+
+/* Styling for social media icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* Home section with a background image */
+.home {
+    background-image: url("../IMg/WhatsApp\ Image\ 2025-01-02\ at\ 01.40.45_d8fee360.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+/* Adding additional padding to the overlay */
+.overlay {
+    padding: 80px;
+}
+
+/* Duplicate social icons styling (can be removed if already applied above) */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+/* Typing effect animation for h2 inside header */
+header h2::after {
+    content: "";
+    animation-duration: 6s;
+    animation-name: repeatparagraph;
+    animation-iteration-count: infinite;
+}
+
+/* Keyframes for text animation */
+@keyframes repeatparagraph {
+    0% { content: "|"; }
+    10% { content: "o |"; }
+    20% { content: "ol |"; }
+    30% { content: "olo |"; }
+    40% { content: "olos|"; }
+    50% { content: "olos |"; }
+    60% { content: "olos M|"; }
+    70% { content: "olos Mi|"; }
+    80% { content: "olos Mich|"; }
+    90% { content: "olos Miche|"; }
+    100% { content: "olos Michelle |"; }
+}
+
+/* About section layout with flexbox */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Styling for the about image */
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* Making about content flexible */
+.about-content {
+    flex: 1;
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+/* Styling for progress bar percentage display */
+.progress-bar div {
+    height: 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+/* Different progress bar colors */
+.green { background: green; width: 25%; }
+.blue { background: blue; width: 50%; }
+.yellow { background: orange; width: 75%; }
+.red { background: red; width: 100%; }
+
+/* Cards section styling */
+.cards {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Button container with spacing */
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* General button styling */
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Download button with transparent background */
+.download {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    background: transparent;
+    color: blue;
+    border: 2px solid blue;
+}
+
+/* Hover effect for download button */
+.download:hover {
+    background: blue;
+    color: white;
+}
+
+/* Submit button styling */
+.submit {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    background: transparent;
+    color: red;
+    border: 2px solid red;
+}
+
+/* Hover effect for submit button */
+.submit:hover {
+    color: white;
+    background: red;
+    border-color: red;
+}
+
+/* Card container using CSS grid for responsiveness */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Styling for each card */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Image inside the card */
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Card title styling */
+.card h3 {
+    margin: 15px 0;
+}
+
+/* Card paragraph styling */
+.card p {
+    padding: 0 15px;
+    color: #555;
+}
+
+/* Card link button */
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid blue;
+    color: blue;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Form section styling */
+.form-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Form container using grid layout */
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Input fields inside the form */
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styling for the form submit button */
+.form-container button {
+    grid-column: span 2;
+    padding: 10px;
+    background: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer styling */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling for icons inside the footer */
+i {
+    color: white;
+    padding: 2px;
+}

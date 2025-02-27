@@ -1,0 +1,98 @@
+/* Importing an external stylesheet */
+@import url("theme1.css");
+@import url("theme2.css");
+@import url("theme3.css");
+
+/* Styling for h2 headings */
+h2 {
+    color: #FF4081; /* Sets the text color to a pink shade */
+}
+
+/* Main section styling */
+main {
+    padding: 0px; /* Removes padding */
+    margin: 0px; /* Removes margin */
+}
+
+/* Calculator container styling */
+.calculator {
+    display: inline-block; /* Makes the calculator inline-block */
+    background: #FFF3E0; /* Sets a light orange background */
+    width: max-content; /* Adjusts width to fit content */
+    height: max-content; /* Adjusts height to fit content */
+    padding: 20px; /* Adds padding inside the calculator */
+    border-radius: 15px; /* Rounds the corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+/* Display input field styling */
+#display {
+    width: 90%; /* Sets width to 90% of the container */
+    height: 50px; /* Sets height */
+    font-size: 24px; /* Sets font size */
+    text-align: right; /* Aligns text to the right */
+    margin-bottom: 10px; /* Adds spacing below the display */
+    border: 3px solid #FF80AB; /* Adds a pink border */
+    border-radius: 10px; /* Rounds the corners */
+    padding: 5px; /* Adds padding inside the input */
+}
+
+/* Styling for the submit button container */
+#subimt_mane {
+    width: max-content; /* Adjusts width to fit content */
+}
+
+/* General button styling */
+button {
+    width: 60px; /* Sets button width */
+    height: 60px; /* Sets button height */
+    margin: 5px; /* Adds spacing around buttons */
+    font-size: 22px; /* Sets font size */
+    font-weight: bold; /* Makes text bold */
+    border: none; /* Removes border */
+    border-radius: 15px; /* Rounds the corners */
+    background-color: #FFD700; /* Sets a gold background */
+    color: #333; /* Sets text color to dark gray */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: all 0.3s; /* Adds smooth transition effects */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #FFC107; /* Changes background color on hover */
+    transform: scale(1.1); /* Scales the button up slightly */
+}
+
+/* Active state for buttons (when clicked) */
+button:active {
+    background-color: #FFB300; /* Changes background color when clicked */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds an inner shadow */
+}
+
+/* Disabled state for the display input */
+#display:disabled {
+    background: white; /* Sets background to white */
+    color: black; /* Sets text color to black */
+}
+
+/* Styling for the theme changer button */
+#changetheme {
+    width: max-content; /* Adjusts width to fit content */
+}
+
+/* Styling for the zero button */
+#zero_btn {
+    width: 140px; /* Makes the zero button wider */
+}
+
+/* Styling for buttons inside forms */
+form button {
+    width: max-content; /* Adjusts width to fit content */
+}
+
+/* General input field styling */
+input {
+    width: max-content; /* Adjusts width to fit content */
+    height: 50px; /* Sets height */
+}
