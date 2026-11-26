@@ -61,6 +61,8 @@ function saveScore(name, value, lowerIsBetter) {
 }
 
 function showScores() {
+  // the scores list is not on the page any more, nothing to show
+  if (document.getElementById('score-list') === null) return;
   var list = [
     ['snake', 'Snake best score', ''],
     ['memory-easy', 'Memory easy: fewest moves', ''],
@@ -80,12 +82,6 @@ function showScores() {
   document.getElementById('score-list').innerHTML = html;
 }
 
-document.getElementById('reset-scores').addEventListener('click', function () {
-  if (confirm('Delete all saved scores?')) {
-    localStorage.removeItem('arcadeScores');
-    showScores();
-  }
-});
 showScores();
 
 // ----- Tabs -----
