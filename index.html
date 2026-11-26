@@ -1,117 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Linking external CSS file -->
-    <link rel="stylesheet" href="./assets/css/home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ker Arcade</title>
+  <link rel="stylesheet" href="./arcade.css">
 </head>
 <body>
-    <!-- Navigation bar -->
-    <nav class="navbar">
-        <div class="logo">Frontend</div>
-        <!-- Mobile menu toggle button -->
-        <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
-        <ul id="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Cards</a></li>
-            <li><a href="#">Slider</a></li>
-            <li><a href="#">Form</a></li>
-            <li><a href="#">Footer</a></li>
-        </ul>
+
+  <!-- Top bar -->
+  <header class="topbar">
+    <a class="brand" href="#top">KER <span>ARCADE</span></a>
+    <nav>
+      <a href="#games">Games</a>
+      <a href="#scores">Scores</a>
+      <a href="#more">More</a>
+      <button id="sound-btn" title="Sound on/off">Sound: on</button>
     </nav>
-    
-    <!-- Hero/Header section -->
-    <header>
-        <div class="home">
-            <div class="home1">
-                <div class="overlay">
-                    <h1>Hello</h1>
-                    <h2>I am Ker</h2>
-                    <!-- Social media icons -->
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-2x fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-2x fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-2x fa-brands fa-facebook"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+  </header>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="about-image">
-            <!-- About section image -->
-            <img src="./assets/images/Lavernder.jpg" alt="Lavender Field">
-        </div>
-        <div class="about-content">
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <!-- Progress bars to show different percentages -->
-            <div class="progress-bar"><div class="green">25%</div></div>
-            <div class="progress-bar"><div class="blue">50%</div></div>
-            <div class="progress-bar"><div class="yellow">75%</div></div>
-            <div class="progress-bar"><div class="red">100%</div></div>
-            <div class="button-container">
-                <!-- Action buttons -->
-                <button class="download">Download</button>
-                <button class="submit">Submit</button>
-            </div>
-        </div>
-    </section>  
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <p class="tag">Ker Arcade</p>
+    <h1>Four small games<br><span class="gradient">I built with JavaScript</span></h1>
+    <p class="intro">Pick a game and try to beat your best score. I made these while learning JavaScript at DECI.</p>
+    <a class="btn main-btn" href="#games">Start playing</a>
+  </section>
 
-    <!-- Cards Section -->
-    <section class="cards">
-        <h2>Cards</h2>
-        <div class="card-container">
-            <!-- Individual card -->
-            <div class="card">
-                <img src="./assets/images/MAgdy Yacoub.jpg" alt="MAgdy Yacoub">
-                <h3>Card Title.</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                <a href="./blog-posts/post1.html" target="_blank">Click me</a>
-            </div>
-            <div class="card">
-                <img src="./assets/images/WhatsApp Image 2025-02-27 at 20.54.37_cd964ef6.jpg" alt="Nature">
-                <h3>Card Title.</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                <a href="./kidcalc/index.html" target="_blank">Click me</a>
-            </div>
-            <div class="card">
-                <img src="./assets/images/MAgdy Yacoub.jpg" alt="Website">
-                <h3>Card Title.</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-                <a href="./blog-posts/post1.html" target="_blank">Click me</a>
-            </div>
+  <!-- Games -->
+  <section class="games" id="games">
+    <div class="tabs">
+      <button class="tab active" data-game="snake">Snake</button>
+      <button class="tab" data-game="memory">Memory</button>
+      <button class="tab" data-game="xo">Tic-Tac-Toe</button>
+      <button class="tab" data-game="reaction">Reaction</button>
+    </div>
+
+    <!-- Snake -->
+    <div class="game-box" id="game-snake">
+      <div class="board-area">
+        <div class="info-row">
+          <span class="pill">Score: <b id="snake-score">0</b></span>
+          <span class="pill">Best: <b id="snake-best">0</b></span>
+          <button class="btn small" id="snake-start">Start</button>
         </div>
-    </section>
-
-    <!-- Form Section -->
-    <section class="form-section">
-        <h2>Form</h2>
-        <div class="form-container">
-            <!-- Input fields for user information -->
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Age">
-            <input type="text" placeholder="Second Name">
-            <input type="password" placeholder="Password">
-            <!-- Form submit button -->
-            <button>Submit</button>
+        <canvas id="snake-canvas" width="400" height="400"></canvas>
+        <p class="message" id="snake-msg">Press Start, then use the arrow keys</p>
+        <div class="touch-pad">
+          <button data-dir="up">Up</button>
+          <button data-dir="left">Left</button>
+          <button data-dir="down">Down</button>
+          <button data-dir="right">Right</button>
         </div>
-    </section>
+      </div>
+      <div class="help">
+        <h3>How to play</h3>
+        <ul>
+          <li>Use the arrow keys or W A S D to move.</li>
+          <li>On a phone, swipe on the board or use the buttons.</li>
+          <li>Press Space to pause.</li>
+          <li>Eat the red food to grow. The gold food gives 5 points but it disappears fast.</li>
+          <li>Do not hit the walls or your own tail.</li>
+        </ul>
+      </div>
+    </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Frontend. All rights reserved.</p>
-    </footer>
+    <!-- Memory -->
+    <div class="game-box hidden" id="game-memory">
+      <div class="board-area">
+        <div class="info-row">
+          <select id="memory-level">
+            <option value="easy">Easy (6 pairs)</option>
+            <option value="normal" selected>Normal (8 pairs)</option>
+            <option value="hard">Hard (12 pairs)</option>
+          </select>
+          <span class="pill">Moves: <b id="memory-moves">0</b></span>
+          <span class="pill">Best: <b id="memory-best">-</b></span>
+        </div>
+        <div id="memory-grid"></div>
+        <p class="message" id="memory-msg"></p>
+        <button class="btn small" id="memory-new">New game</button>
+      </div>
+      <div class="help">
+        <h3>How to play</h3>
+        <ul>
+          <li>Click two cards to flip them.</li>
+          <li>If they match, they stay open.</li>
+          <li>Find all the pairs in as few moves as you can.</li>
+        </ul>
+      </div>
+    </div>
 
-    <!-- JavaScript for menu toggle functionality -->
-    <script>
-        function toggleMenu() {
-            document.getElementById("nav-links").classList.toggle("active");
-        }
-    </script>
+    <!-- Tic-Tac-Toe -->
+    <div class="game-box hidden" id="game-xo">
+      <div class="board-area">
+        <div class="info-row">
+          <select id="xo-mode">
+            <option value="easy">Easy</option>
+            <option value="hard" selected>Hard</option>
+            <option value="two">2 players</option>
+          </select>
+          <span class="pill">X: <b id="xo-x">0</b></span>
+          <span class="pill">Draw: <b id="xo-draw">0</b></span>
+          <span class="pill">O: <b id="xo-o">0</b></span>
+        </div>
+        <div id="xo-board"></div>
+        <p class="message" id="xo-msg"></p>
+        <button class="btn small" id="xo-new">New round</button>
+      </div>
+      <div class="help">
+        <h3>How to play</h3>
+        <ul>
+          <li>You are X and you play first.</li>
+          <li>Get three in a row to win.</li>
+          <li>Hard mode never makes a mistake, so a draw is a good result.</li>
+          <li>Choose 2 players to play with a friend on the same screen.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Reaction -->
+    <div class="game-box hidden" id="game-reaction">
+      <div class="board-area">
+        <div class="info-row">
+          <span class="pill">Round: <b id="reaction-round">0</b> / 5</span>
+          <span class="pill">Best: <b id="reaction-best">-</b></span>
+        </div>
+        <div id="reaction-box" class="waiting-start">Click here to start</div>
+        <div id="reaction-times"></div>
+      </div>
+      <div class="help">
+        <h3>How to play</h3>
+        <ul>
+          <li>Click the box to start.</li>
+          <li>Wait until it turns green, then click as fast as you can.</li>
+          <li>If you click too early, the round does not count.</li>
+          <li>You play 5 rounds. A normal reaction is about 250 ms.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scores -->
+  <section class="scores" id="scores">
+    <h2>Your best scores</h2>
+    <p class="small-text">Saved in this browser only.</p>
+    <div class="score-list" id="score-list"></div>
+    <button class="btn small" id="reset-scores">Reset scores</button>
+  </section>
+
+  <!-- Other projects -->
+  <section class="more" id="more">
+    <h2>More from Ker</h2>
+    <div class="more-list">
+      <a class="more-card" href="./kidcalc/index.html">
+        <h3>Kid Calc</h3>
+        <p>A colourful calculator with three themes.</p>
+      </a>
+      <a class="more-card" href="./blog-posts/post1.html">
+        <h3>Blog</h3>
+        <p>Notes from my DECI learning journey.</p>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made by Ker for the Digital Egypt Cubs Initiative (DECI).</p>
+  </footer>
+
+  <script src="./main.js"></script>
+  <script src="./snake.js"></script>
+  <script src="./memory.js"></script>
+  <script src="./xo.js"></script>
+  <script src="./reaction.js"></script>
 </body>
 </html>
