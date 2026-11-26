@@ -138,20 +138,20 @@ function drawSquare(x, y, color) {
 
 function drawSnake() {
   // background
-  ctx.fillStyle = '#0e1124';
+  ctx.fillStyle = '#fffbe8';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // food
-  drawSquare(food.x, food.y, '#ff4d8d');
-  if (goldFood !== null) drawSquare(goldFood.x, goldFood.y, '#ffc857');
+  drawSquare(food.x, food.y, '#d33a2c');
+  if (goldFood !== null) drawSquare(goldFood.x, goldFood.y, '#f2b632');
 
   // snake: the head is a lighter colour
   for (var i = 0; i < snake.length; i++) {
-    drawSquare(snake[i].x, snake[i].y, i === 0 ? '#7cffee' : '#00c9b0');
+    drawSquare(snake[i].x, snake[i].y, i === 0 ? '#14532d' : '#3a9a4f');
   }
 
   if (snakePaused) {
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
+    ctx.fillStyle = 'rgba(29, 27, 24, 0.7)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = 'white';
     ctx.font = 'bold 30px Arial';
